@@ -12,7 +12,6 @@ df_Most = pd.read_csv('Most.txt', sep='\t')
 df_Moderate = pd.read_csv('Moderate.txt',sep='\t')
 df_Less = pd.read_csv('Less.txt', sep='\t')
 df_Non = pd.read_csv('Non.txt',sep='\t')
-# df_drugbank = pd.read_csv('drugbank_mold2.txt',sep='\t')
 df_FAERS = pd.read_csv('FAERS.txt',sep='\t')
 drugbank_150 = pd.read_csv('drugbank_150.txt',sep='\t')
 
@@ -47,7 +46,6 @@ for i in sec_scr:
 
 x.append("D164")
 X = X.drop(x, axis = 1)
-# X_drugbank = X_drugbank.drop(x,axis = 1)
 X_drugbank_150 = X_drugbank_150.drop(x,axis = 1)
 X_faers = X_faers.drop(x,axis = 1)
 X_out_test = pd.concat([X_faers.iloc[0:150,:],X_drugbank_150],axis=0)
